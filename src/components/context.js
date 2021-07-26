@@ -10,6 +10,7 @@ const AppProvider = ({ children }) => {
   const [video, setVideo] = useState(null)
   const [isRegister, setIsRegister] = useState(false)
   const [LoginModal, setLoginModal] = useState(false)
+  const [Author, setAuthor] = useState(null)
 
   const fetchData = async () => {
     const response = await fetch(
@@ -63,6 +64,8 @@ const AppProvider = ({ children }) => {
         CloseLogin,
         OpenRegister,
         CloseRegister,
+        Author,
+        setAuthor,
       }}
     >
       {children}

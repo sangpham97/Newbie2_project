@@ -28,9 +28,9 @@ export default function Navbar() {
             <div className='mx-auto' />
             <ul className='navbar-nav'>
               <li className='nav-item'>
-                <a className='nav-link active' aria-current='page' href='#home'>
+                <Link to='/' className='nav-link active' aria-current='page'>
                   Home
-                </a>
+                </Link>
               </li>
               <li className='nav-item'>
                 <a className='nav-link' href='#about'>

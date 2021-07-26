@@ -1,11 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useGlobalContext } from './context'
 export default function FeatureItem({ product }) {
   const { largeImageURL, likes, views, user, tags, id } = product
+  const { setAuthor } = useGlobalContext()
   return (
     <article className='tour-card' key={id}>
       <div className='tour-img-container'>
-        <Link to={`/Feature/${user}`}>
+        <Link to={`/Feature/${user}`} onClick={() => setAuthor(product)}>
           <img src={largeImageURL} className='img-fluid w-100' alt='' />
           <p className='tour-date'>august 14th, 2019</p>
         </Link>
